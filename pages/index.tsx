@@ -229,8 +229,8 @@ const Home: NextPage = () => {
               {/* Image Preview of NFTs */}
               <img
                 className={styles.image}
-                // src={contractMetadata?.image}
-                  src={ `https://media.licdn.com/dms/image/C4D0BAQGfSxEoy3VWqA/company-logo_200_200/0/1648207782851?e=2147483647&v=beta&t=g7SLfFbHnAyyLyLKj59mSUpD6XWEeDtkJ9oGduHo8lg`}
+                src={contractMetadata?.image}
+                  // src={ `https://media.licdn.com/dms/image/C4D0BAQGfSxEoy3VWqA/company-logo_200_200/0/1648207782851?e=2147483647&v=beta&t=g7SLfFbHnAyyLyLKj59mSUpD6XWEeDtkJ9oGduHo8lg`}
                   alt={`${contractMetadata?.name} preview image`}
 
                 />
@@ -317,12 +317,12 @@ const Home: NextPage = () => {
         )}
       </div>
       {/* Powered by thirdweb */}{" "}
-      <img
+      {/* <img
         src="/logo.png"
         alt="thirdweb Logo"
         width={135}
         className={styles.buttonGapTop}
-      />
+      /> */}
     </div>
   );
 };
