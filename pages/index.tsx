@@ -17,7 +17,7 @@ import styles from "../styles/Theme.module.css";
 import { parseIneligibility } from "../utils/parseIneligibility";
 
 // Put Your NFT Drop Contract address from the dashboard here
-const myNftDropContractAddress = "0x90E2dD8C48cA35534Dd70e3eC19B362cdf71981E";
+const myNftDropContractAddress = "0xB70a05D15976aeda718E4ebfa9975c351c928307";
 
 const Home: NextPage = () => {
   const { contract: nftDrop } = useContract(myNftDropContractAddress);
@@ -218,7 +218,7 @@ const Home: NextPage = () => {
           <>
             <div className={styles.infoSide}>
               {/* Title of your NFT Collection */}
-              <h1>{contractMetadata?.name}</h1>
+              <h1>NFT Drop</h1>
               {/* Description of your NFT Collection */}
               <p className={styles.description}>
                 {contractMetadata?.description}
@@ -229,14 +229,16 @@ const Home: NextPage = () => {
               {/* Image Preview of NFTs */}
               <img
                 className={styles.image}
-                src={contractMetadata?.image}
-                alt={`${contractMetadata?.name} preview image`}
-              />
+                // src={contractMetadata?.image}
+                  src={ `https://media.licdn.com/dms/image/C4D0BAQGfSxEoy3VWqA/company-logo_200_200/0/1648207782851?e=2147483647&v=beta&t=g7SLfFbHnAyyLyLKj59mSUpD6XWEeDtkJ9oGduHo8lg`}
+                  alt={`${contractMetadata?.name} preview image`}
+
+                />
 
               {/* Amount claimed so far */}
               <div className={styles.mintCompletionArea}>
                 <div className={styles.mintAreaLeft}>
-                  <p>Total Minted</p>
+                  <p>Total Claimed</p>
                 </div>
                 <div className={styles.mintAreaRight}>
                   {claimedSupply && unclaimedSupply ? (
